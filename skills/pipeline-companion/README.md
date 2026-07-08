@@ -4,6 +4,22 @@ Companion for Green Irony's My Pipeline / Sales Command Center Notion CRM templa
 rep's admin: import, call prep, logging call notes, follow-up emails, quota, and pipeline reviews.
 The rep talks; the skill does the Notion busywork.
 
+## Installation
+
+1. **Download the skill:**
+   - Download the zipped skill from the
+     [Releases page](https://github.com/Green-Irony/community-skills/releases).
+2. **Install in Claude:**
+   - Open Claude.ai > Settings > Skills.
+   - Click "Upload skill".
+   - Select the zipped skill folder you downloaded.
+3. **Enable the skill:**
+   - Toggle on the **pipeline-companion** skill.
+4. **Test:**
+   - Ask Claude: **"how do I get started managing my pipeline"**.
+
+Continue with the prerequisites below before your first run.
+
 ## Prerequisites
 
 - The **My Pipeline** or **Sales Command Center** Notion template installed (duplicated) in your
