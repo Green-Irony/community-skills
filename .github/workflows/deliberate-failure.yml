@@ -1,0 +1,25 @@
+name: Deliberate Failure Test
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  deliberate-failure:
+    name: deliberate-failure
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Python dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run deliberate-failure test
+        run: python scripts/test_deliberate_failure.py

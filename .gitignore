@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Node / markdownlint
+node_modules/
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Python virtualenvs
+.venv/
+venv/
+
+# Local env / secrets (never commit)
+.env
+.env.*
+*.pem
+
+# OS
+.DS_Store
+Thumbs.db

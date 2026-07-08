@@ -1,0 +1,17 @@
+# community-skills CODEOWNERS
+# All paths require architect approval.
+# Sacred constraint: both Seth and Chris must be in the routing pattern.
+
+# Default: every path routes to both architects
+*                            @SethJackson-GreenIrony @cketchuck
+
+# Skills content: either architect can approve
+/skills/                     @SethJackson-GreenIrony @cketchuck
+
+# Governance files: both architects explicitly required
+/.github/                    @SethJackson-GreenIrony @cketchuck
+/CODEOWNERS                  @SethJackson-GreenIrony @cketchuck
+/.claude-plugin/             @SethJackson-GreenIrony @cketchuck
+/spec/                       @SethJackson-GreenIrony @cketchuck
+/scripts/                    @SethJackson-GreenIrony @cketchuck
+/LICENSE                     @SethJackson-GreenIrony @cketchuck
