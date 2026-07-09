@@ -4,6 +4,6 @@
     "name": "Green Irony"
   },
   "plugins": [
-    { "name": "pipeline-companion", "source": "./skills/pipeline-companion", "description": "Companion for the My Pipeline / Sales Command Center Notion CRM template — work deals, prep calls, log activity, and track quota." }
+    { "name": "pipeline-companion", "source": "./plugins/pipeline-companion", "description": "Companion for the My Pipeline / Sales Command Center Notion CRM template — work deals, prep calls, log activity, and track quota." }
   ]
 }

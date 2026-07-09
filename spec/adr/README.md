@@ -11,4 +11,5 @@ Filename convention: `ADR-NNNN-short-title.md` where NNNN is a zero-padded integ
 
 | ADR | Title | Status |
 |---|---|---|
-| ADR-0001 | Use anthropics/skills flat layout for community-skills | Accepted |
+| ADR-0001 | Use anthropics/skills flat layout for community-skills | Superseded by ADR-0002 |
+| ADR-0002 | Switch to per-plugin layout for community-skills | Accepted |
