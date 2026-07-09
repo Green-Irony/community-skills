@@ -1,9 +1,22 @@
 {
   "name": "community-skills",
   "owner": {
-    "name": "Green Irony"
+    "name": "Green Irony",
+    "email": "devex@greenirony.com",
+    "url": "https://greenirony.com"
   },
+  "version": "1.0.0",
+  "description": "Green Irony's public marketplace of Claude Code plugins for the community.",
   "plugins": [
-    { "name": "pipeline-companion", "source": "./plugins/pipeline-companion", "description": "Companion for the My Pipeline / Sales Command Center Notion CRM template — work deals, prep calls, log activity, and track quota." }
+    {
+      "name": "pipeline-companion",
+      "source": "./plugins/pipeline-companion",
+      "version": "1.0.1",
+      "description": "Companion for the My Pipeline / Sales Command Center Notion CRM template — work deals, prep calls, log activity, and track quota.",
+      "keywords": ["crm", "sales", "notion", "pipeline"],
+      "author": {
+        "name": "Green Irony"
+      }
+    }
   ]
 }
