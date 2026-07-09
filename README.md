@@ -1,39 +1,40 @@
-# community-skills
+# plugins
 
-Green Irony's public Claude skill library. Skills teach Claude how to perform
-tasks in a repeatable way across Cowork and Claude Code sessions.
+Green Irony's public Claude Code plugin marketplace. One shelf for our free, community-facing
+plugins across Cowork and Claude Code.
 
-This repo is where Green Irony publishes skills for the community. It currently
-ships **pipeline-companion**, the wingman for the
-[My Pipeline / Sales Command Center](https://greenirony.com) Notion CRM template:
-work your deals, prep calls, log activity, draft follow-ups, and track quota —
+This repo currently ships **Notion CRM Companion**, the Claude-side companion for the
+[My Pipeline / Sales Command Center](https://greenirony.com) Notion CRM template — its Pipeline
+Tracker skill works your deals, preps calls, logs activity, drafts follow-ups, and tracks quota,
 all through your own Notion connector.
 
 ## What's in this repo
 
-- `skills/` — One directory per skill. Each contains a `SKILL.md` and a `README.md`.
+- `plugins/` — One directory per plugin. Each contains a `.claude-plugin/plugin.json`, a
+  `README.md`, and a `skills/` directory (one subdirectory per skill, each with a `SKILL.md`).
 - `spec/adr/` — Architecture Decision Records for this repo.
 - `template/` — Starter template for authoring new skills.
 - `tests/` — CI test fixtures, including the deliberate-failure fixture.
 - `scripts/` — Validation and test scripts run by CI.
 
-## Installing skills
+## Installing plugins
 
 ```shell
-/plugin marketplace add Green-Irony/community-skills
+/plugin marketplace add Green-Irony/plugins
 ```
 
-Or install a specific skill:
+Or install a specific plugin:
 
 ```shell
-/plugin install pipeline-companion@community-skills
+/plugin install notion-crm-companion@plugins
 ```
 
-## Adding a new skill
+## Adding a new plugin
 
-1. Copy `template/SKILL.md` into a new directory under `skills/`.
-2. Name the directory to match the `name` field in the frontmatter.
-3. Add the skill to `.claude-plugin/marketplace.json`.
+1. Copy `template/SKILL.md` into a new directory under `plugins/<plugin-name>/skills/<skill-name>/`.
+2. Name the skill directory to match the `name` field in the frontmatter.
+3. Add a `.claude-plugin/plugin.json` for the plugin, and register it in
+   `.claude-plugin/marketplace.json`.
 4. Open a PR — a CODEOWNERS-required architect review is mandatory.
 
 ## Contributing

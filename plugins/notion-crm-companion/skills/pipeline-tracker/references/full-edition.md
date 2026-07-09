@@ -31,13 +31,13 @@ hard ceiling" in SKILL.md):
 
 ## The five commands
 
-### brief — the morning plan
+### brief — Morning Brief
 
 Read 💼 My Pipeline's open deals fresh — don't reuse a list from earlier in the conversation.
 Report: what's due today or overdue (Next Step Due), what's gone quiet (Last Touch 14+ days),
 and the single deal that most needs attention and why. Short — it's a standup, not a report.
 
-### review — weekly pipeline review
+### review — Weekly Pipeline Review
 
 Read every open deal, fresh. Report: (1) what moved this week, (2) what's stalling — no touch
 in 14+ days or overdue next steps, (3) open deals missing a Next Step entirely (the discipline
@@ -54,7 +54,7 @@ coverage, and what realistically has to close to hit the number. Straight talk, 
 Open the 🏢 Accounts page for the named account. Report: every contact there, every deal open and
 closed, what the account page's brief and history say, and what the relationship needs next.
 
-### crm update — paste-ready updates for the team system
+### crm update — Update Deal (paste-ready updates for the team system)
 
 For teams that also run Salesforce, HubSpot, or another system of record. From what changed in
 💼 My Pipeline recently (or since a date the user gives), write per-deal updates — stage, next

@@ -1,20 +1,20 @@
-# pipeline-companion
+# Notion CRM Companion
 
-Companion for Green Irony's My Pipeline / Sales Command Center Notion CRM templates — runs the
-rep's admin: import, call prep, logging call notes, follow-up emails, quota, and pipeline reviews.
-The rep talks; the skill does the Notion busywork.
+The Claude-side companion for Green Irony's My Pipeline / Sales Command Center Notion CRM
+templates. Its Pipeline Tracker skill runs the rep's admin: import, call prep, logging call notes,
+follow-up emails, quota, and pipeline reviews. The rep talks; the skill does the Notion busywork.
 
 ## Installation
 
 1. **Download the skill:**
    - Download the zipped skill from the
-     [Releases page](https://github.com/Green-Irony/community-skills/releases).
+     [Releases page](https://github.com/Green-Irony/plugins/releases).
 2. **Install in Claude:**
    - Open Claude.ai > Settings > Skills.
    - Click "Upload skill".
    - Select the zipped skill folder you downloaded.
 3. **Enable the skill:**
-   - Toggle on the **pipeline-companion** skill.
+   - Toggle on the **pipeline-tracker** skill.
 4. **Test:**
    - Ask Claude: **"how do I get started managing my pipeline"**.
 
@@ -41,9 +41,10 @@ will walk you through it. Or do it directly:
 - **follow up** — draft the recap email from the last logged activity
 - **menu** — list what's available
 
-Full edition (Sales Command Center) adds: **brief**, **review**, **quota**, **history [account]**,
-and **crm update**. On the free My Pipeline edition these degrade gracefully — the skill does the
-best honest version with what's available and names the capability gap once.
+Full edition (Sales Command Center) adds: **brief** (Morning Brief), **review** (Weekly Pipeline
+Review), **quota**, **history [account]**, and **crm update** (Update Deal). On the free My
+Pipeline edition these degrade gracefully — the skill does the best honest version with what's
+available and names the capability gap once.
 
 ## Source
 
