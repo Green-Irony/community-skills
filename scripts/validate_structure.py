@@ -1,5 +1,9 @@
 """
-validate_structure.py — Validates the cowork-skills repo structure.
+validate_structure.py — Validates the community-skills repo structure.
+
+Layout (ADR-0002): each marketplace plugin's source directory must contain a
+skills/ subdirectory with one directory per bundled skill, each holding a
+SKILL.md whose frontmatter name matches the skill directory name.
 
 Usage:
     python scripts/validate_structure.py
@@ -67,6 +71,7 @@ def main():
         sys.exit(1)
 
     plugins = manifest.get("plugins", [])
+    skills_validated = []
     for plugin in plugins:
         source = plugin["source"]
         # Resolve source relative to REPO_ROOT (strip leading ./ if present)
@@ -83,36 +88,51 @@ def main():
             print(f"ERROR: source directory not found: {source_path}")
             sys.exit(1)
 
-        skill_md = source_path / "SKILL.md"
-        if not skill_md.exists():
-            print(f"ERROR: SKILL.md not found in: {source_path}")
+        # Per-plugin layout (ADR-0002): each plugin source directory holds its
+        # own skills/ subdirectory, one directory per bundled skill.
+        skills_dir = source_path / "skills"
+        if not skills_dir.is_dir():
+            print(f"ERROR: skills directory not found in plugin source: {skills_dir}")
             sys.exit(1)
 
-        try:
-            post = frontmatter.load(str(skill_md))
-        except Exception as e:
-            print(f"ERROR: failed to parse frontmatter in {skill_md}: {e}")
+        skill_dirs = sorted(p for p in skills_dir.iterdir() if p.is_dir())
+        if not skill_dirs:
+            print(f"ERROR: no skill directories found in: {skills_dir}")
             sys.exit(1)
 
-        name = post.metadata.get("name", "")
-        if not name:
-            print(f"ERROR: 'name' field missing or empty in frontmatter: {skill_md}")
-            sys.exit(1)
+        for skill_dir in skill_dirs:
+            skill_md = skill_dir / "SKILL.md"
+            if not skill_md.exists():
+                print(f"ERROR: SKILL.md not found in: {skill_dir}")
+                sys.exit(1)
 
-        description = post.metadata.get("description", "")
-        if not description:
-            print(f"ERROR: 'description' field missing or empty in frontmatter: {skill_md}")
-            sys.exit(1)
+            try:
+                post = frontmatter.load(str(skill_md))
+            except Exception as e:
+                print(f"ERROR: failed to parse frontmatter in {skill_md}: {e}")
+                sys.exit(1)
 
-        dir_name = source_path.name
-        if name != dir_name:
-            print(
-                f"ERROR: 'name' field in frontmatter ({name!r}) does not match "
-                f"directory name ({dir_name!r}): {skill_md}"
-            )
-            sys.exit(1)
+            name = post.metadata.get("name", "")
+            if not name:
+                print(f"ERROR: 'name' field missing or empty in frontmatter: {skill_md}")
+                sys.exit(1)
 
-    print(f"PASS: all {len(plugins)} skills validated.")
+            description = post.metadata.get("description", "")
+            if not description:
+                print(f"ERROR: 'description' field missing or empty in frontmatter: {skill_md}")
+                sys.exit(1)
+
+            dir_name = skill_dir.name
+            if name != dir_name:
+                print(
+                    f"ERROR: 'name' field in frontmatter ({name!r}) does not match "
+                    f"directory name ({dir_name!r}): {skill_md}"
+                )
+                sys.exit(1)
+
+            skills_validated.append(name)
+
+    print(f"PASS: all {len(plugins)} plugins ({len(skills_validated)} skills) validated.")
     sys.exit(0)
 
 
