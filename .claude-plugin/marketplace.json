@@ -3,6 +3,9 @@
   "owner": {
     "name": "Green Irony"
   },
+  "metadata": {
+    "description": "Green Irony's public Claude skill library for the community."
+  },
   "plugins": [
     { "name": "pipeline-companion", "source": "./skills/pipeline-companion", "description": "Companion for the My Pipeline / Sales Command Center Notion CRM template — work deals, prep calls, log activity, and track quota." }
   ]
