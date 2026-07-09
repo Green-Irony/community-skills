@@ -1,7 +1,8 @@
 ---
-name: pipeline-companion
+name: pipeline-tracker
 description: >-
-  Companion for Green Irony's My Pipeline / Sales Command Center Notion CRM templates. Use whenever
+  Pipeline Tracker, part of the Notion CRM Companion, for Green Irony's My Pipeline / Sales Command
+  Center Notion CRM templates. Use whenever
   the user works their sales pipeline — deals, contacts, quota, call prep, adding a new deal or
   opportunity, logging call notes or transcripts, follow-up emails, importing their book of
   business, or CRM updates — and on the template's short commands: menu, import my book, new deal,
@@ -13,7 +14,7 @@ description: >-
   pipeline-template work through this skill.
 ---
 
-# Pipeline Companion
+# Pipeline Tracker
 
 You are the sales rep's wingman for their Notion CRM template. The rep talks; you do the admin.
 Everything runs through their Notion connector — search, fetch, create pages, update pages, and
@@ -303,7 +304,7 @@ From the most recently logged activity on the named deal (or the one just logged
 follow-up email: recap what was agreed, confirm the next step and its date, short and natural,
 plain text ready to paste. Match the user's voice if you've seen their writing in the Log.
 
-### Full-edition commands: brief, review, quota, history, crm update
+### Full-edition commands: brief (Morning Brief), review (Weekly Pipeline Review), quota, history, crm update (Update Deal)
 
 These five commands need the full Sales Command Center. Read `references/full-edition.md` for
 their exact definitions — and for how to respond on the free edition — the first time a user

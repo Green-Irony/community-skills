@@ -1,5 +1,5 @@
 """
-validate_structure.py — Validates the community-skills repo structure.
+validate_structure.py — Validates the plugins repo structure.
 
 Layout (ADR-0002): each marketplace plugin's source directory must contain a
 skills/ subdirectory with one directory per bundled skill, each holding a
@@ -36,7 +36,7 @@ REPO_ROOT = Path(__file__).parent.parent.resolve()
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Validate cowork-skills repo structure.")
+    parser = argparse.ArgumentParser(description="Validate plugins repo structure.")
     parser.add_argument(
         "--manifest",
         default=str(REPO_ROOT / ".claude-plugin" / "marketplace.json"),

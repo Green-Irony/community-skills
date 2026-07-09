@@ -1,6 +1,7 @@
 # Architecture Decision Records
 
-This directory holds Architecture Decision Records (ADRs) for the community-skills repo.
+This directory holds Architecture Decision Records (ADRs) for the plugins repo (formerly
+community-skills — see ADR-0002).
 
 ## Format
 
