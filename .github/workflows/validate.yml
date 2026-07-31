@@ -13,16 +13,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
-
-      - name: Install Python dependencies
-        run: pip install -r requirements.txt
-
-      - name: Validate marketplace JSON and required files
-        run: python scripts/validate_structure.py
+      - name: Validate marketplace structure
+        uses: Green-Irony/gi-core/.github/actions/marketplace-lint@main
 
       - name: Lint markdown
         run: |
