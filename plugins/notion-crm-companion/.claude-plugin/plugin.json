@@ -1,6 +1,6 @@
 {
   "name": "notion-crm-companion",
-  "description": "The Claude-side companion for Green Irony's My Pipeline / Sales Command Center Notion CRM template — work deals, prep calls, log activity, and track quota.",
+  "description": "The Claude-side companion for Green Irony's My Pipeline / Sales Command Center Notion CRM template \u2014 work deals, prep calls, log activity, and track quota.",
   "version": "1.1.0",
   "author": {
     "name": "Green Irony LLC",
@@ -9,6 +9,10 @@
   },
   "homepage": "https://greenirony.com",
   "repository": "https://github.com/Green-Irony/plugins",
-  "license": "MIT",
-  "keywords": ["notion", "crm", "sales", "pipeline"]
+  "keywords": [
+    "notion",
+    "crm",
+    "sales",
+    "pipeline"
+  ]
 }
